@@ -1,0 +1,21 @@
+FROM centos
+RUN yum -y install git
+RUN git init
+RUN git clone https://github.com/ravi2krishna/CalculatorJavaApp.git
+CMD ls
+CMD git remote -v
+CMD git status
+CMD remote remove origin
+CMD git branch newbranch
+CMD git checkout newbranch
+RUN git remote add origin https://github.com/jyothivk07/devops.git
+CMD touch testfile && cat > this is to test
+CMD git commit -m "new file created"
+CMD git config --global user.name "jyothivk07"
+CMD git config --global user.email "sivajyothimanda@gmail.com"
+CMD git push -u origin master
+CMD checkout master
+CMD git log
+CMD git show HEAD
+CMD echo "THIS IS MY GIT IMPLEMENTATION IN DOCKER FILE"
+~                                                   
